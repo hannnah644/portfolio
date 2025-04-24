@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum Vitae</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        max-width: 1100px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .sidebar {
+        width: 30%;
+        background-color: #2f4858;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .sidebar img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .sidebar h1 {
+        margin: 10px 0;
+        font-size: 22px;
+    }
+
+    .sidebar p {
+        font-size: 14p;
+        margin-bottom: 20px;
+		letter-spacing: 0.5px;
+    }
+	
+    .content {
+        width: 70%;
+        padding: 30px;
+        background-color: #fff;
+    }
+
+    .content h2 {
+        background-color: #2f4858;
+        color: #fff;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .skills-list {
+        margin-top: 10px;
+    }
+	
+	.skills-list li {
+        background-color: #e0e7ff;
+        color: #2f4858;
+        border-radius: 5px;
+        padding: 5px 10px;
+        display: inline-block;
+        margin: 5px 0;
+    }
+	
+    #about-me-section {
+        display: none; /* Dili makita ang content by default */
+        padding: 20px;
+        margin-top: 0;
+        border-top: 2px solid #2f4858;
+        background-color: #f9fafb;
+    }
+
+     #about-me-section h2 {
+        margin-bottom: 10px;
+        color: #2f4858;
+    }
+	
+    #about-me-title {
+        display: none; /* Dili makita ang title by default */
+        background-color: #2f4858;
+        color: #fff;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <img src="aKOnI.jpg" onclick="showAboutMe()">
+        <h1>Hannah Mitche D. Lomod</h1>
+        <p>Student</p>
+        <div class="contact-info">
+            <h2>Contacts</h2>
+            <p>Address: Candelaria, Dagohoy, Bohol</p>
+            <p>Email: <a href="mailto:lomodhannahmitche@gmail.com">lomodhannahmitche@gmail.com</a></p>
+            <p>Phone #: 09380771792</p>
+        </div>
+        <div class="skills">
+            <h2>Language</h2>
+            <p>Bisaya, Tagalog, English</p>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Canva Designing</li>
+                <li>Basic Java Programming</li>
+                <li>Basic C Programming</li>
+                <li>Template Creation</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Personal Data</h2>
+        <ul>
+            <li><span>Course:</span> Bachelor of Science in Computer Engineering</li>
+            <li><span>Date of Birth:</span> December 10, 2005</li>
+            <li><span>Place of Birth:</span> Candelaria, Dagohoy, Bohol</li>
+            <li><span>Age:</span> 19</li>
+            <li><span>Sex:</span> Female</li>
+        </ul>
+        
+        <h2>Educational Background</h2>
+        <ul>
+            <li><span>Tertiary:</span> University of Bohol (1st Year)</li>
+            <li><span>Secondary:</span> Dagohoy National High School (Batch 2023-2024)</li>
+            <li><span>Elementary:</span> Tiguis Elementary School (Batch 2017-2018)</li>
+        </ul>
+        <h2>Organization</h2>
+        <ul>
+            <li>Computer Engineering Student's Association (COMPESA)</li>
+        </ul>
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Create templates</li>
+            <li>Watching anime</li>
+            <li>Reading mangas and novels</li>
+            <li>Table tennis</li>
+            <li>Eating</li>
+        </ul>
+
+
+        <!-- About Me Section (Title + Content) -->
+        <h2 id="about-me-title">About Me</h2>
+        <div id="about-me-section">
+            <p>I'm Hannah Mitche D. Lomod, a 1st-year Computer Engineering student at the University of Bohol. I have a passion for designing templates, basic programming in Java and C Language, and exploring new things in tech. I love creating things and continuously improving my skills.</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript aron mogawas ang About Me kung mapislit ang picture -->
+<script>
+    function showAboutMe() {
+        var aboutMeSection = document.getElementById("about-me-section");
+        var aboutMeTitle = document.getElementById("about-me-title");
+
+        if (aboutMeSection.style.display === "none" || aboutMeSection.style.display === "") {
+            aboutMeSection.style.display = "block";  // Ipakita ang content
+            aboutMeTitle.style.display = "block";    // Ipakita ang title
+        } else {
+            aboutMeSection.style.display = "none";   // Itago ang content
+            aboutMeTitle.style.display = "none";     // Itago ang title
+        }
+    }
+</script>
+
+</body>
+</html>
